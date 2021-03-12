@@ -1,0 +1,21 @@
+% !TeX root = ../main.tex
+
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[every node/.style={circle,draw=black}]
+    \node (c1) at (0,0) {S};
+    \node (c2) [right=of c1] {E};
+    \node (c3) [right=of c2] {I};
+    \node (c4) [right=of c3] {R};
+    
+    \path[->] (c1) edge (c2);
+    \path[->] (c2) edge (c3);
+    \path[->] (c3) edge (c4);
+    
+     
+\end{tikzpicture}
+
+\caption{\citeauthor{mobility2020} 的隨機 SEIR 模型. 此模型用來描述疾病的進程，分成四種族群: 未感染的族群(Susceptible, S), 潛伏期的族群(Exposed, E), 發病的族群(Infected, I) 和 復原的族群(Recovered, R)}
+\label{fig:seir}
+\end{figure}

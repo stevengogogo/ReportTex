@@ -1,0 +1,69 @@
+% !TeX root = ./main.tex
+
+
+%行高
+\renewcommand{\baselinestretch}{1.5} 
+
+%版型
+\usepackage[a4paper,left=3cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+
+%數學
+\usepackage{amsmath}
+
+%表格
+\usepackage{tabularx}
+\usepackage{ltablex}
+
+%中文設定
+\usepackage{xeCJK} %讓中英文字體分開設置
+% Noto Font: Download here: https://www.google.com/get/noto/#sans-hant
+\setCJKmainfont{Noto Sans CJK TC}
+
+\usepackage{booktabs} % 畫分隔線
+
+%隱藏標題碼
+\makeatletter
+\renewcommand\@seccntformat[1]{}
+\makeatother
+
+%顏色
+\usepackage[dvipsnames]{xcolor}
+
+%標頭文字
+\usepackage{fancyhdr} 
+
+
+%超連結
+\usepackage[unicode]{hyperref} %用 unicode防止中文亂碼
+\usepackage{url}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=NavyBlue,
+    filecolor=NavyBlue,      
+    urlcolor=NavyBlue,
+    citecolor=NavyBlue
+} %超連結顏色
+
+%文包圖
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{stfloats} %caption footnote
+%彩色方塊文字
+\usepackage{tcolorbox}
+
+%圖的文字
+\usepackage[labelfont=bf, font={small}]{caption}
+
+%中文package
+\usepackage{CJKutf8}
+
+%畫圖
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+%Reference
+\usepackage[numbers]{natbib}
+\bibliographystyle{unsrtnat}
+
+\usepackage{multicol}
