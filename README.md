@@ -1,6 +1,6 @@
 # ReportTeX: A LaTeX template supporting both English and Traditional Chinese
 
-[![.github/workflows/ci.yml](https://github.com/stevengogogo/ReportTex/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/stevengogogo/ReportTex/actions/workflows/ci.yml)
+[![.github/workflows/ci.yml](https://github.com/{ORG-or-USERNAME}/{REPO-NAME}/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/stevengogogo/ReportTex/actions/workflows/ci.yml)
 
 **ReportTeX** is a LaTeX pipline for generating report and manuscript. This template uses [tectonic](https://github.com/tectonic-typesetting/tectonic) engine to skip cumbersome installation of MacTex (try `brew install tectonic`), and this can largely safe your life! 
 
