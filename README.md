@@ -1,8 +1,13 @@
-# ReportTex: A LaTeX template supporting both English and Traditional Chinese
+# ReportTeX: A LaTeX template supporting both English and Traditional Chinese
 
+**ReportTeX** is a LaTeX pipline for generating report and manuscript. This template uses [tectonic](https://github.com/tectonic-typesetting/tectonic) engine to skip cumbersome installation of MacTex (try `brew install tectonic`), and this can largely safe your life! 
+
+This pipline also supports Chinese characters, which is difficult to be render by TeX engine. Fourtunely, tectonic is based on XeTeX which supports `Unit-8` character. Below is the output with the mixture of English and Manderin:
 
 |<img width="859" alt="Screen Shot 2021-03-12 at 6 50 57 PM" src="https://user-images.githubusercontent.com/29009898/110930292-e3190200-8363-11eb-9f15-2c4f47b68371.png">|<img width="860" alt="Screen Shot 2021-03-12 at 6 51 45 PM" src="https://user-images.githubusercontent.com/29009898/110930386-017efd80-8364-11eb-902d-e82908c36310.png">|
 |---|---|
+
+To my knowlege, this is the easist pipline to work on Latex with Manderin article. Enjoy😄
 
 ## How to build `main.tex`?
 
@@ -59,3 +64,15 @@ in terminal.
 
 
 
+## Features
+
+- Tectonic
+     - Easy installing
+     - Auto downloading `sty` files
+     - Light and fast
+- Self-hosted
+     - No need to limit to Overleaf's IDE 
+     - Allow to use Git branches
+- Github CI
+     - Allow testing before merging
+     - Detect bugs early.
