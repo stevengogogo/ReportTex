@@ -29,9 +29,12 @@
 %顏色
 \usepackage[dvipsnames]{xcolor}
 
-%標頭文字
+%標頭文字. 上欄
 \usepackage{fancyhdr} 
-
+\pagestyle{fancy}
+\fancyhf{}
+%頁碼
+\cfoot{\thepage} 
 
 %超連結
 \usepackage[unicode]{hyperref} %用 unicode防止中文亂碼
@@ -45,6 +48,9 @@
     citecolor=NavyBlue
 } %超連結顏色
 
+% 可愛圖
+\usepackage{fontawesome5} %gallery of fontawesome: https://mirror-hk.koddos.net/CTAN/fonts/fontawesome5/doc/fontawesome5.pdf
+
 %文包圖
 \usepackage{wrapfig}
 \usepackage{subcaption}
@@ -52,7 +58,7 @@
 %彩色方塊文字
 \usepackage{tcolorbox}
 
-%圖的文字
+%圖的文字編碼
 \usepackage[labelfont=bf, font={small}]{caption}
 
 %中文package
@@ -64,6 +70,7 @@
 
 %Reference
 \usepackage[numbers]{natbib}
+%\usepackage[round]{natbib}
 \bibliographystyle{unsrtnat}
 
 \usepackage{multicol}

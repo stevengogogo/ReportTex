@@ -1,49 +1,65 @@
 % !TEX encoding = UTF-8 Unicode
-
-
 \documentclass[12pt, a4paper]{article}
 
 
 
 
-
+%Layout setup
 \input{setup.tex}
 
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{
-研究計畫
+%Top row topics
+\rhead{主題(右邊)}
+\lhead{主題(左邊)}
+
+
+
+%\date{} %Uncomment to hide date
+\title{\textbf{主題}}
+
+\author{邱紹庭%
+\thanks{ 
+    Correspondence: \href{mailto:r07945001@ntu.edu.tw}{\faInbox~r07945001@ntu.edu.tw}}; 
 }
-\lhead{
-博士班申請-臺大生醫電子與資訊學研究所甲組
-}
-
-\cfoot{\thepage}
-
-
-
-\title{\textbf{研究計畫}}
-
-\author{邱紹庭(\href{mailto:r07945001@ntu.edu.tw}{r07945001@ntu.edu.tw})\thanks{現臺大生醫電資所電子組碩士三年級，於\href{https://ntubmse.com/}{魏安祺老師實驗室}研究生物系統 (\href{https://drive.google.com/file/d/1dyBDxwvc3T4O5-BkM7Hrb8Lq1OcsbrCi/view?usp=sharing}{個人履歷}).}}
 
 
 \begin{document}
 
 \maketitle
 
-\section{讀書計畫}
+\section{段落一:中文測試}
 
-我在魏安祺老師實驗室研究期間，主要研究項目為生物系統領域。用微分方程系統和控制系統理論研究粒線體往細胞核傳訊的過程。碩士班的研究放在數學建模與控制系統分析上\cite{chiu2020}
+測試引用 \cite{mobility2020}. 
 
-\section{研究進程}
+\section{段落二: English Section}
 
+English is a West Germanic language first spoken in early medieval England, which has eventually become the leading language of international discourse in the 21st century
 
-%https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ2FudHRcbiAgIFxuICAgIGRhdGVGb3JtYXQgIFlZWVktTU0tRERcbiAgICB0aXRsZSBSZXNlYXJjaCBTY2hlZHVsZVxuXG4gICAgc2VjdGlvbiDnoJTnqbblhaflrrlcbiAgICDlrbjnv5IgQWdlbnRzLmpsIOS4puaetuioreeglOeptiBwYWNrYWdlOiAyMDIxLTA3LTAxLCAyMDIxLTA4LTAxXG4gICAgXG4gICAgXG4gICAgc2VjdGlvbiDlj7DlpKfljZrlo6tcbiAgICDnoqnoq5bmlofmipXmkJ7lnIvpmpvmnJ_liIo6IDIwMjEtMDMtMjIsIDIwMjEtMDYtMjdcbiAgICDmj5Dlh7rnoJTnqbZwcm9wb3NhbDogMjAyMS0xMi0yMCwgMjAyMS0xMi0yNVxuICAgIOS_ruiqsijljZrkuInkuIopOiAyMDIzLTA5LTE1LDIwMjQtMDEtMTVcbiAgICDkv67oqrIo5Y2a5LiJ5LiLKTogMjAyNC0wMi0yNSwyMDI0LTA2LTMwXG4gICAg5Y2a5aOr5a245L2N6ICDOiAyMDI0LTA3LTIyLCAyMDI0LTA3LTIzXG4gICAgXG5cbiAgICBzZWN0aW9uIOmZveS6pOeJmemGq1xuICAgIOWtuOagoeiqsueoiyjkupTkuIopOiAgZG9uZSwgMjAyMS0wOS0xNCwgMjAyMi0wMS0xN1xuICAgIOWtuOagoeiqsueoiyjkupTkuIopOiAgZG9uZSwyMDIyLTAyLTI1LCAyMDIyLTA1LTMwXG4gICAg6Ieo5bqK5a-m57-SOiBkb25lLDIwMjItMDYtMDEsIDIwMjMtMDUtMzBcbiAgICDkuozpmo7lnIvogIM6IGRvbmUsIDIwMjMtMDctMjMsMjAyMy0wNy0yNFxuXG4gICAgdG9kYXlNYXJrZXIgb2ZmXG4gICAgXG5cbiAgICAiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ
+\subsection{段落二之一: 圖片, tcolorbox, table}
 
+左邊的圖為 \ref{fig:pred-cities}; 右邊則為 \ref{fig:pred-compare}
 
+%Figure: 子圖
+\begin{figure}[htb]
+    \centering 
+    
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{fig/sample.png}
+         \caption{Sample 1}
+         \label{fig:pred-cities}
+    \end{subfigure} 
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{fig/sample.png}
+        \caption{範例二}
+        \label{fig:pred-compare}
+    \end{subfigure}
+    
+    \caption{\citeauthor{mobility2020} 的 COVID-19 預測圖 \cite{mobility2020}) }
+    \label{fig:pred}
+\end{figure}
 
+%色彩方塊
 \begin{tcolorbox}[title=隨機 SEIR 模型]
-    SEIR 模型的疾病擴散模型。以下方程式描述的是每個時間點~($t$) 從一個狀態轉換到下一個階段的人數以 $N$表示(狀態的分類在Fig. \ref{fig:seir})。由於每個人轉換狀態的機率為 Bernoulli 機率分佈，群體下的機率則可以用下面的方程式表示:
+    S從一個狀態轉換到下一個階段的人數以 $N$ 表示(狀態的分類在Fig.~\ref{fig:pred})。由於每個人轉換狀態的機率為 Bernoulli 機率分佈，群體下的機率則可以用下面的方程式表示:
     
     \begin{align} 
         N^{(t)}_{S_{c_i}\rightarrow E_{c_i}} & \sim  Binom(S^{(t)}_{c_1},  \lambda^{(t)}_{c_1}) \label{eq:N_S2E}\\
@@ -51,13 +67,29 @@
         N^{(t)}_{1_{c_1}\rightarrow R_{c_i}} & \sim Binom(I^{(t)}_{c_i}, 1/ \delta_{i})  
     \end{align}
     
-    $N^{t}_{i\rightarrow j}$ 指的是在時間$t$時由$i$狀態轉換至$j$狀態的人數。遵從 $Binomial$ 分佈, PMF (Probability mass functoin) 為~$N \sim Binomial(n,p) = {N\choose n} p^{n}(1-p)^{N-n} $。其中 P 代表的是一個人轉換狀態的機率. 而 $\delta_E$ 和 $\delta_i$ 分別為平均潛伏期(96hr)和平均發病期(84hr)\cite{vinfo2020}。
-    \end{tcolorbox}
+    $N^{t}_{i\rightarrow j}$ 指的是在時間$t$時由$i$狀態轉換至$j$狀態的人數。
+\end{tcolorbox}
 
 
+%圖表
+\begin{tabularx}{\linewidth}{ X  X   }
+    \toprule
+    
+    \textbf{Data} & \textbf{連結}   \\ 
+
+    \bottomrule
+    
+    A & \url{https://github.com/nytimes/covid-19-data}   \\ \hline
+    A & \url{https://github.com/CSSEGISandData/COVID-19} \\ \hline
+    \toprule
+    \multicolumn{2}{l}{\textbf{預測工具}} \\ 
+    \bottomrule
+    SEIR 的 deterministic model (Python)\citep{mobility2020} & \url{https://github.com/ihmeuw/covid-model-seiir-pipeline/} \\ \hline
+    \bottomrule
+\end{tabularx}
+
+% 輸出文獻
 \bibliography{library}
-
-
 
 
 \end{document}
