@@ -41,7 +41,7 @@ in terminal.
 |`.github`|Continuous Integration with [tectonic](https://github.com/tectonic-typesetting/tectonic), a modern LaTeX compiler written in Rust|
 |`fonts.txt`|Contains the url of noto fonts. If you want more fonts. Please see noto font website and append the url in it.|
 
-*Noted that usually Manderin fonts is cumbersome to be downloaded. This process is largely redueced by @sosiristseng*
+*Noted that usually Manderin fonts is cumbersome to be downloaded. This process is largely redueced by*  @sosiristseng
 
 ## How to compile this file 
 
