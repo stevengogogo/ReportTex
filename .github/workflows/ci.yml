@@ -1,26 +1,15 @@
-
-on: [push]
+name: 'Build LaTex Document'
+on: [push, pull-request]
 
 jobs:
-
-  latex-job:
-    runs-on: ubuntu-latest
-    name: A job to Compile Latex file
-    steps: #Install Chinese Font
-    - uses: actions/checkout@v1
-    - name: Install fonts 
-      run: |
-          sudo apt update -qq
-          sudo apt-get install -y fonts-noto-cjk-extra -qq
-          sudo fc-cache -fv 
-    - name: Install Mamba and tectonic
-      run: |
-          wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvjC /tmp --strip-components=1
-          /tmp/micromamba create -p $HOME/pkg tectonic -c conda-forge
-    - name: Add tectonic to PATH
-      run: |
-          echo "$HOME/pkg/bin" >> $GITHUB_PATH 
-    - name: Compile PDF
-      run: |
-          make
-
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install CJK fonts 
+      run: sudo apt update -qq && sudo apt-get install -y fonts-noto-cjk-extra && sudo fc-cache -fv
+    - uses: wtfjoke/setup-tectonic@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Compile TeX to PDF
+      run: tectonic main.tex

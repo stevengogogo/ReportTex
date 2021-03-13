@@ -1,2 +1,0 @@
-build:
-	tectonic main.tex
