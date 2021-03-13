@@ -9,10 +9,3 @@ updates:
     - "GH Actions"
     commit-message:
       prefix: ci
-
-  - package-ecosystem: "gitsubmodule"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    labels:
-    - "dependencies"
