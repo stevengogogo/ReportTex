@@ -16,7 +16,7 @@ jobs:
         restore-keys: |
            ${{ runner.os }}-tectonic-
     - uses: wtfjoke/setup-tectonic@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Compile TeX to PDF
       run: tectonic main.tex
