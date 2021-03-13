@@ -9,12 +9,14 @@ jobs:
     - name: Download CJK fonts 
       run: |
         mkdir -p ~/.local/share/fonts
-        wget -P ~/.local/share/fonts -i fonts.txt
+        wget -nc -P ~/.local/share/fonts -i fonts.txt
         fc-cache -fv
     - uses: actions/cache@v2.1.4
       name: Tectonic Cache
       with:
-        path: ~/.cache/Tectonic
+        path: |
+          ~/.cache/Tectonic
+          ~/.local/share/fonts
         key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
         restore-keys: |
            ${{ runner.os }}-tectonic-
