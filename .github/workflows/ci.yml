@@ -1,5 +1,5 @@
 name: 'Build LaTex Document'
-on: [push, pull-request]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -9,7 +9,7 @@ jobs:
     - name: Install CJK fonts 
       run: sudo apt update -qq && sudo apt-get install -y fonts-noto-cjk-extra && sudo fc-cache -fv
     - uses: wtfjoke/setup-tectonic@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Compile TeX to PDF
       run: tectonic main.tex
