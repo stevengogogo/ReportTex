@@ -75,7 +75,6 @@ Also see the [Gihub CI config file](.github/workflows/ci.yml)
      ```
      in terminal. The automation is supported by the [makefile](makefile). Change it if you need customization.
 
-
 ## Features
 
 - Tectonic
