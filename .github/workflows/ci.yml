@@ -6,13 +6,8 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
-    - name: Download CJK fonts 
-      run: |
-        mkdir -p ~/.local/share/fonts
-        wget -nc -P ~/.local/share/fonts -i fonts.txt
-        fc-cache -fv
     - uses: actions/cache@v2.1.4
-      name: Tectonic Cache
+      name: Cache tectonic and fonts
       with:
         path: |
           ~/.cache/Tectonic
@@ -20,6 +15,11 @@ jobs:
         key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
         restore-keys: |
            ${{ runner.os }}-tectonic-
+    - name: Download CJK fonts 
+      run: |
+        mkdir -p ~/.local/share/fonts
+        wget -nc -P ~/.local/share/fonts -i fonts.txt
+        fc-cache -fv
     - uses: wtfjoke/setup-tectonic@v1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
