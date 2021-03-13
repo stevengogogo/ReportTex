@@ -6,8 +6,11 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
-    - name: Install CJK fonts 
-      run: sudo apt update -qq && sudo apt-get install -y fonts-noto-cjk-extra && sudo fc-cache -fv
+    - name: Download CJK fonts 
+      run: |
+        mkdir -p ~/.local/share/fonts
+        wget -P ~/.local/share/fonts -i fonts.txt
+        fc-cache -fv
     - uses: actions/cache@v2
       name: Tectonic Cache
       with:
