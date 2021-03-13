@@ -11,7 +11,7 @@ jobs:
         mkdir -p ~/.local/share/fonts
         wget -P ~/.local/share/fonts -i fonts.txt
         fc-cache -fv
-    - uses: actions/cache@v2
+    - uses: actions/cache@v2.1.4
       name: Tectonic Cache
       with:
         path: ~/.cache/Tectonic
