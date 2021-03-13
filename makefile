@@ -1,2 +1,2 @@
 build:
-  tectonic main.tex
+    tectonic main.tex
