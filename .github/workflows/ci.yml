@@ -20,7 +20,7 @@ jobs:
         mkdir -p ~/.local/share/fonts
         wget -nc -P ~/.local/share/fonts -i fonts.txt
         fc-cache -fv
-    - uses: wtfjoke/setup-tectonic@v1.1.7
+    - uses: wtfjoke/setup-tectonic@v1.1.9
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Compile TeX to PDF
